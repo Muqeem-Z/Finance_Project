@@ -1,45 +1,5 @@
-class Client:
-    def __init__ (self, identifier, name, contact, local, active):
-        self.name = name
-        self.id = identifier
-        self.contact = contact
-        self.location = local #there might be different rules for local and international clients (citizenship)
-        self.active = active
-
-    def change_contact (self, new_contact):
-        self.contact = new_contact
-
-    def display_info (self):
-        print("--------------------------------")
-        print("          CLIENT INFO")
-        print("--------------------------------")
-        print(f"Client name: {self.name}")
-        print(f"Client identity number: {self.id}")
-        print(f"Client contact: {self.contact}")
-        print(f"Is client Australian? {self.location}")
-        print(f"Client Active: {self.active}")
-        print("--------------------------------")
-        print("")
-
-class Account:
-    def __init__ (self, acc_id, acc_type, balance, owner):
-        self.acc_id = acc_id
-        self.acc_type = acc_type
-        self.balance = balance
-        self.owner = owner
-
-    def deposit (self, amount):
-        self.balance += amount
-
-    def withdraw (self, amount):
-        if amount <= self.balance:
-            self.balance -= amount
-        else:
-            print(f"Account {self.acc_id} has insufficient funds for this withdrawl. ")
-    
-    def display_balance (self):
-        print(f"{self.acc_id}'s account balance: ${self.balance:.2f}")
-
+from Accounts import Account
+from Clients import Client
 
 client_1 = Client(1, "Ali", "ali@gmail.com", True, True)
 client_2 = Client(2, "Sarah", "0412345679", False, True)
