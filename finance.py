@@ -42,7 +42,7 @@ class Account:
 
 
 client_1 = Client(1, "Ali", "ali@gmail.com", True, True)
-client_2 = Client(2, "Sarah", "0412345678", False, True)
+client_2 = Client(2, "Sarah", "0412345679", False, True)
 client_3 = Client(3, "John", "john@gmail.com", True, False)
 
 account_1 = Account(1, "Savings", 1000, client_1)
