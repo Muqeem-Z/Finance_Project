@@ -43,10 +43,11 @@ branch3 = Branch(3, "ijk Branch", "Mawson Lakes", "0400000002", "Open")
 
 print(branch1.available)
 print(branch2.available)
+print(branch3.available)
 
 branch1.open_branch()
 branch3.close_branch()
-branch2.change_phone()
+branch2.change_phone("0400000003")
 
 print(branch1.available)
 print(branch2.available)
