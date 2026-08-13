@@ -13,6 +13,9 @@ account_3 = Account(3, "Savings", 2000, client_3)
 
 client_1.display_info()
 client_2.display_info()
+client_3.display_info()
+client_3.change_contact("john1@gmail.com")
+client_3.display_info()
 
 account_1.deposit(500)
 account_2.deposit(200)
@@ -32,6 +35,9 @@ transaction3 = Transaction(3, "Transfer", 1600, "Tranfer to friend's account")
 
 transaction1.process()
 transaction2.cancel()
+transaction3.update_desc("Transfer to friend's savings account")
+
+print(transaction3.desc)
 
 print(transaction1.status)
 print(transaction2.status)
