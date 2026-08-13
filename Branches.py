@@ -23,3 +23,6 @@ class Branch:
     def change_phone(self, number):
         self.phone = number
         print(f"Phone number has been changed to {self.phone}.")
+
+    def __str__ (self):
+        return (f"Branch Number: {self.branch_num}, Name: {self.branch_name}, Suburb: {self.suburb}, Contact no: {self.phone}, Availability: {self.available}")

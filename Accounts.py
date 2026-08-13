@@ -17,4 +17,5 @@ class Account:
     def display_balance (self):
         print(f"{self.acc_id}'s account balance: ${self.balance:.2f}")
 
-
+    def __str__(self):
+        return (f"Account ID: {self.acc_id}, Type: {self.acc_type}, Balance: ${self.balance:.2f}, Owner: {self.owner}")

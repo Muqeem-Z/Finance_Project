@@ -20,3 +20,7 @@ class Client:
         print(f"Client Active: {self.active}")
         print("--------------------------------")
         print("")
+
+    def __str__ (self):
+        return (f"Client Identity Number: {self.id}, Name: {self.name}, Preffered Contact: {self.contact}")
+
