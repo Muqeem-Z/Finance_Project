@@ -24,6 +24,8 @@ class Transaction:
         else:
             print("Transaction cannot be cancelled because it is already settled.")
 
-    def __str__ (self):
-        return (f"Transaction Identity: {self.trans_id}, Type: {self.trans_type}, Amount: ${self.amount:.2f}, Description: {self.desc}, Status: {self.status}")
+    def __str__(self):
+        return (f"Transaction ID {self.trans_id}. It is a {self.trans_type} transaction containing amount ${self.amount:.2f}, for {self.desc}. Its current status is {self.status}")
 
+    def __repr__(self):
+        return (f"Transaction (trans_id={self.trans_id}, trans_type={self.trans_type}, amount={self.amount}, desc={self.desc}, status={self.status}")

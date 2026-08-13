@@ -1,5 +1,5 @@
 class Branch:
-    def __init__(self, branch_num, branch_name, suburb, phone, available = "Closed"):
+    def __init__(self, branch_num, branch_name, suburb, phone, available="Closed"):
         self.branch_num = branch_num
         self.branch_name = branch_name
         self.suburb = suburb
@@ -24,5 +24,11 @@ class Branch:
         self.phone = number
         print(f"Phone number has been changed to {self.phone}.")
 
-    def __str__ (self):
+    def __str__(self):
         return (f"Branch Number: {self.branch_num}, Name: {self.branch_name}, Suburb: {self.suburb}, Contact no: {self.phone}, Availability: {self.available}")
+
+    def __str__(self):
+        return (f"Branch Number: {self.branch_num}. Branch name is {self.branch_name}, located in {self.suburb}. Their contact details are {self.phone}. Branch is currently {self.available}")
+
+    def __repr__(self):
+        return (f"Branch (branch_num={self.branch_num}, branch_name={self.branch_name}, suburb={self.suburb}, phone={self.phone}, available={self.available}")
