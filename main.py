@@ -30,7 +30,7 @@ client_3.display_info()
 print(client_3)
 print(repr(client_3))
 
-client_3.change_contact("john1@gmail.com")
+client_3.set_contact("john1@gmail.com")
 
 print(client_3)
 print(repr(client_3))
@@ -66,33 +66,21 @@ transaction1.process()
 transaction2.cancel()
 transaction3.cancel()
 
-transaction3.update_desc("Transfer to friend's savings account")
+transaction3.set_desc("Transfer to friend's savings account")
 
 print(transaction3)
 print(repr(transaction3))
 
-print(transaction3.desc)
-
-print(transaction1.status)
-print(transaction2.status)
-print(transaction3.status)
-
 # Branch methods
-
-print(branch1.available)
-print(branch2.available)
-print(branch3.available)
 
 print(branch2)
 print(repr(branch3))
 
 branch1.open_branch()
 branch3.close_branch()
-branch2.change_phone("0400000003")
+branch2.set_phone("0400000003")
 
 print(branch2)
 print(repr(branch3))
 
-print(branch1.available)
-print(branch2.available)
-print(branch3.available)
+
