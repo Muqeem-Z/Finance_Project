@@ -1,4 +1,7 @@
 class Transaction:
+    """Represents a single financial transaction and manages its
+    description and processing status."""
+
     def __init__(self, trans_id, trans_type, amount, desc):
         if isinstance(trans_id, int) and not isinstance(trans_id, bool) and trans_id > 0:
             self.__trans_id = trans_id
@@ -40,7 +43,7 @@ class Transaction:
 
     def get_status(self):
         return self.__status
-    
+
     def set_desc(self, new_desc):
         if isinstance(new_desc, str) and new_desc.strip():
             self.__desc = new_desc

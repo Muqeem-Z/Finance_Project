@@ -1,5 +1,8 @@
 class Branch:
-    def __init__(self, branch_num, branch_name, suburb, phone, available="closed"):
+    """Represents a physical bank branch and manages its contact
+    details and opening state."""
+
+    def __init__(self, branch_num, branch_name, suburb, phone, available="Closed"):
         if isinstance(branch_num, int) and not isinstance(branch_num, bool) and branch_num > 0:
             self.__branch_num = branch_num
         else:
@@ -27,8 +30,8 @@ class Branch:
         if isinstance(available, str) and available in ["Open", "Closed"]:
             self.__available = available
         else:
-            print("Invalid availability. Using 'closed'.")
-            self.__available = "closed"
+            print("Invalid availability. Using 'Closed'.")
+            self.__available = "Closed"
 
     def get_branch_num(self):
         return self.__branch_num
